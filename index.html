@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+ 
+<head>  
+    <title>Document</title>  
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>  
+    <script>  
+        $(function(){  
+            //锚点跳转滑动效果  
+            $('a[href*=#],area[href*=#]').click(function() {  
+                console.log(this.pathname)  
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
+                    var $target = $(this.hash);  
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');  
+                    if ($target.length) {  
+                        var targetOffset = $target.offset().top;  
+                        $('html,body').animate({  
+                                    scrollTop: targetOffset  
+                                },  
+                                1000);  
+                        return false;  
+                    }  
+                }  
+            });  
+        })  
+    </script>  
+    
+</head>  
+<body>  
+    
+        <a href="#mk01" title="intro">intro</a>  
+        <a href="#mk02" title="aaaa">aaaa</a>  
+        <a href="#mk03" title="bbbb">bbbb</a>  
+        <a href="#mk04" title="cccc">cccc</a>  
+        <a href="#mk05" title="result">result</a>  
+              
+        </a>  
+    
+  
+    <div id="mk01">mk01mk01</div> 
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div>
+<div>aaaaa</div> 
+    <div id="mk02">mk02mk02</div> 
+    <div id="mk03">mk03mk03</div>  
+    <div id="mk04">mk04mk04</div>  
+    <div id="mk05">mk05mk05</div>  
+</body>  
+</html>  
